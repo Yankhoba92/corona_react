@@ -12,19 +12,20 @@ const Oceanie = (props)=>{
     })
       setcountriesOceanie(myArrayArray)
   }, [])
-  
-  let newArray = null
-    if(countriesOceanie !== null){
-         newArray = props.data.filter((el) =>{
-        return (
-            newArray.indexOf() !== -1 ? newArray == true:null
 
+//   console.log("props donné",props.data)
+//   console.log("oceanie countries",countriesOceanie)
+  let newArray = null
+    if(countriesOceanie && props.data  ){
+         newArray = props.data.filter((el) => {
+             console.log(el.name)
+        return (
+            countriesOceanie.indexOf(el.name) !== -1
             // si l'indexOf est différent de -1 alors on retoyurne vrai ou faux
             )
     })
     }
-    // console.log(newArray)
-
+    // console.log("array filtré",newArray)
     return(
         <div>
             

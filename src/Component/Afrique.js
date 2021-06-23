@@ -1,11 +1,36 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-const Afrique = (props)=>{
-   
-     // FAIRE UN AGLORITHME POUR FILTRER LES DATAS ET AFFHICHER SEULEMENT LES PAYS D'AFRIQUE
-    
+import axios from 'axios';
+import { useEffect, useState } from "react";
+const Oceanie = (props)=>{
+    const [countriesOceanie, setcountriesOceanie] = useState(null)
+    useEffect( async() => {
+      const result = await axios("https://restcountries.eu/rest/v2/region/africa")
+    //   console.log(result.data)
+      const myArray = Object.values(result.data)
+      const myArrayArray = myArray.map((test) =>{
+        return(test.name)
+    })
+      setcountriesOceanie(myArrayArray)
+  }, [])
+
+//   console.log("props donné",props.data)
+//   console.log("oceanie countries",countriesOceanie)
+  let newArray = null
+    if(countriesOceanie && props.data  ){
+         newArray = props.data.filter((el) => {
+             console.log(el.name)
+        return (
+            countriesOceanie.indexOf(el.name) !== -1
+            // si l'indexOf est différent de -1 alors on retoyurne vrai ou faux
+            )
+    })
+    }
+    // console.log("array filtré",newArray)
     return(
         <div>
-            
+            {newArray === null ? 
+            <p>En attente</p> 
+            : 
             <section className="containerTableau">
                 <table class="table table-bordered">
                 <div>
@@ -21,7 +46,7 @@ const Afrique = (props)=>{
                             <th>Taux de guérisons</th>
                         </tr>
                     </thead>
-           {props.data.map((donnes, index)=>{
+           {newArray !== null ? newArray.map((donnes, index)=>{
             return (
                 <tbody>
                     <td>{index}</td>
@@ -34,16 +59,16 @@ const Afrique = (props)=>{
                     <td>{donnes.recovery_ratio}%</td>
                 </tbody>
             )
-            })}
+            }): <p>tets</p>}
             </div>
                 </table>
-            </section> 
+            </section> }
         </div>
         
        
     )
 }
-export default Afrique
+export default Oceanie
 
 
     
