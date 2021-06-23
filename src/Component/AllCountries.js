@@ -8,7 +8,7 @@ const AllCountries = (props) =>{
         // console.log(result.data.data.regions)
         let myArray = Object.values(result.data.data.regions)
         setData(myArray)
-        console.log(myArray)
+        // console.log(myArray)
     }, [])
     return(
         <div>

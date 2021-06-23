@@ -1,22 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios';
-import { useEffect, useState } from "react";
-import dataAfrique from '../assets/CountryAfrique'
-
 const Afrique = (props)=>{
-    const [data, setDataAfrique] = useState(null)
-    useEffect( async() => {
-        const result = await axios("https://api.quarantine.country/api/v1/summary/latest")
-        // console.log(result.data.data.regions)
-        let myArray = Object.values(result.data.data.regions)
-        setDataAfrique(myArray)
-        console.log(myArray)
-    }, [])
-    let africa
-     // FAIRE UN QGLORITUE? POUR FILTRER LES DATS ET AFFHICHER SEULE?MENT LES PQYS D QFRIAUE
+   
+     // FAIRE UN AGLORITHME POUR FILTRER LES DATAS ET AFFHICHER SEULEMENT LES PAYS D'AFRIQUE
     
     return(
         <div>
+            
             <section className="containerTableau">
                 <table class="table table-bordered">
                 <div>
@@ -34,16 +23,21 @@ const Afrique = (props)=>{
                     </thead>
            {props.data.map((donnes, index)=>{
             return (
-            <tbody>
+                <tbody>
                     <td>{index}</td>
-                    <td className="paysStyle">{donnes}</td>
-                    
-                </tbody>)
+                    <td className="paysStyle">{donnes.name}</td>
+                    <td>{donnes.total_cases}</td>
+                    <td>{donnes.critical}</td>
+                    <td>{donnes.deaths}</td>
+                    <td>{donnes.recovered}</td>
+                    <td>{donnes.death_ratio}%</td>
+                    <td>{donnes.recovery_ratio}%</td>
+                </tbody>
+            )
             })}
             </div>
                 </table>
-            </section>
-            {console.log(africa)}     
+            </section> 
         </div>
         
        

@@ -17,14 +17,13 @@ import {
   // Link
 } from "react-router-dom";
 function App() {
-
-  const [data, setData] = useState(null)
+  const [data, setData] = useState([null])
   useEffect( async() => {
     const result = await axios("https://api.quarantine.country/api/v1/summary/latest")
     // console.log(result.data.data.regions)
-    let myArray = Object.values(result.data.data.regions)
+    const myArray = Object.values(result.data.data.regions)
     setData(myArray)
-    console.log(myArray)
+    // console.log(myArray)
 }, [])
 // ICI USEEFFETCT POUR RECUPERER LES DATAS
 
@@ -39,19 +38,19 @@ function App() {
            <Afrique data={data}/>
          </Route>
          <Route path="/asie">
-           <Asie/>
+           <Asie data={data}/>
          </Route>
          <Route path="/amerique">
-           <Amerique/>
+           <Amerique data={data}/>
          </Route>
          <Route path="/europe">
-           <Europe/>
+           <Europe data={data}/>
          </Route>
          <Route path="/oceanie">
-           <Oceanie/>
+           <Oceanie data={data}/>
          </Route>
          <Route path="/">
-          <AllCountries data="data"/>
+          <AllCountries data={data}/>
          </Route>
        </Switch>
      </Router>
