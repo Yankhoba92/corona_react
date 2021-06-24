@@ -12,9 +12,6 @@ const Oceanie = (props)=>{
     })
       setcountriesOceanie(myArrayArray)
   }, [])
-
-//   console.log("props donné",props.data)
-//   console.log("oceanie countries",countriesOceanie)
   let newArray = null
     if(countriesOceanie && props.data  ){
          newArray = props.data.filter((el) => {
