@@ -19,7 +19,7 @@ const Oceanie = (props)=>{
     if(countriesOceanie && props.data  ){
          newArray = props.data.filter((el) => {
             if(el == null){
-                <p>no result</p>
+                <p>No Result</p>
              }else{
                  return (
                     countriesOceanie.indexOf(el.name) !== -1
@@ -59,7 +59,7 @@ const Oceanie = (props)=>{
                     <td>{donnes.recovery_ratio}%</td>
                 </tbody>
             )
-            }): <p>tets</p>}
+            }): <p>No Result</p>}
             </div>
                 </table>
             </section> 

@@ -13,7 +13,7 @@ const AllCountries = (props) =>{
     return(
         <div>
             {data === null ? 
-            <p>En attente</p> 
+            <p>No Result</p> 
             : 
             <section className="containerTableau">
                 <table class="table table-bordered">
