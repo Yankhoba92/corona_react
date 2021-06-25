@@ -28,7 +28,7 @@ const Main =(props) =>{
 
                 <div><img src="https://res.cloudinary.com/e-bureau/image/upload/v1624001721/kisspng-chart-portable-network-graphics-computer-icons-dia--5b6ee9669e2d83.8590197315339953666479_cymlu9.png"/></div>
                     <p className="">Population mondial</p>
-                    <p className="somme">7,873,191,432</p>
+                    <p className="somme">7873191432</p>
                 </div>
                 <div className="casCovid">
                 <div><img src="https://res.cloudinary.com/e-bureau/image/upload/v1624002569/kisspng-business-statistics-average-economic-statistics-green-rising-bar-chart-and-arrow-image-5aa6ff8e45a5f5.3559800315208938382853_t3pfqf.png"/></div>
