@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Component/Header';
 import Main from './Component/Main';
@@ -32,7 +31,7 @@ function App() {
     <div >
      <Router>
        <Header />
-       <Main/>
+       <Main data={data}/>
        <Switch>
          <Route path="/afrique">
            <Afrique data={data}/>

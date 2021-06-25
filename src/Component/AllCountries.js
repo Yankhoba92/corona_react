@@ -8,7 +8,7 @@ const AllCountries = (props) =>{
         // console.log(result.data.data.regions)
         let myArray = Object.values(result.data.data.regions)
         setData(myArray)
-        // console.log(myArray)
+        // console.log(myArray[0].change)
     }, [])
     return(
         <div>
@@ -21,26 +21,30 @@ const AllCountries = (props) =>{
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Pays</th>
-                            <th>Cas de covid</th>
-                            <th>Cas critique</th>
-                            <th>Décès</th>
-                            <th>Guérisons</th>
-                            <th>Taux de décés</th>
-                            <th>Taux de guérisons</th>
+                            <th>Country</th>
+                            <th>Total Cases</th>
+                            <th>New Cases</th>
+                            <th>Serious Critical</th>
+                            <th>Total Deaths</th>
+                            <th>New Deaths</th>
+                            <th>Total recovered</th>
+                            <th>New recovered</th>
+                            
                         </tr>
                     </thead>
                     {data.map((country, index) => {
+                        // console.log("changement: ",country.change)
                         return(
                             <tbody>
                                 <td>{index}</td>
                                 <td className="paysStyle">{country.name}</td>
                                 <td>{country.total_cases}</td>
+                                <td className={country.change.active_cases >=0?"newCas":"newsDeath"}>{country.change.active_cases}</td>
                                 <td>{country.critical}</td>
                                 <td>{country.deaths}</td>
+                                <td className={country.change.deaths <=0?"newCas":"newsDeath"}>{country.change.deaths}</td>
                                 <td>{country.recovered}</td>
-                                <td>{country.death_ratio}%</td>
-                                <td>{country.recovery_ratio}%</td>
+                                <td className={country.change.recovered >=0?"newCas":"newsDeath"}>{country.change.recovered}</td>
                             </tbody>
                         )
                     })}

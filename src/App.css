@@ -5,10 +5,17 @@
 header{
   display: flex;
   align-items: center;
-  margin: 31px 0 0 29px;
+  margin: 20px 0 0 29px;
   
 }
-.navbar{
+.navbarHeader{
+  position: fixed;
+  margin-top: 0;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  margin: 0, 0, 0;
+  background-color: white;
   border-bottom: 1px solid #b7b6ab;
 }
 .logo{
@@ -33,11 +40,19 @@ nav ul li a{
   font-weight: bold;
   font-family: 'Viaoda Libre', cursive;
 }
+.background{
+  background-image: url("https://res.cloudinary.com/e-bureau/image/upload/v1624525769/covid-4948866_1280_xykh0u.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 169vh;
+}
 .container{
  width: 70%;
  margin: 0 auto;
  text-align: center;
- margin-top: 200px;
+ margin-top: 110px;
 }
 .container h2{
   color: #699a21;
@@ -89,3 +104,15 @@ tbody .paysStyle{
   font-size: 15px;
   text-align: center;   
 } 
+.newCas{
+  background-color: #699a21 !important;
+  color: white;
+}
+.newsDeath{
+  background-color: #eb1313 !important;
+  color: white;
+}
+.somme{
+  font-size: larger;
+  font-weight: bold;
+}

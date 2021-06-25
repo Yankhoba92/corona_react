@@ -34,16 +34,17 @@ const Oceanie = (props)=>{
             <section className="containerTableau">
                 <table class="table table-bordered">
                 <div>
-                    <thead>
+                <thead>
                         <tr>
                             <th>#</th>
-                            <th>Pays</th>
-                            <th>Cas de covid</th>
-                            <th>Cas critique</th>
-                            <th>Décès</th>
-                            <th>Guérisons</th>
-                            <th>Taux de décés</th>
-                            <th>Taux de guérisons</th>
+                            <th>Country</th>
+                            <th>Total Cases</th>
+                            <th>New Cases</th>
+                            <th>Serious Critical</th>
+                            <th>Total Deaths</th>
+                            <th>New Deaths</th>
+                            <th>Total recovered</th>
+                            <th>New recovered</th>
                         </tr>
                     </thead>
            {newArray !== null ? newArray.map((donnes, index)=>{
@@ -52,11 +53,12 @@ const Oceanie = (props)=>{
                     <td>{index}</td>
                     <td className="paysStyle">{donnes.name}</td>
                     <td>{donnes.total_cases}</td>
+                    <td className={donnes.change.active_cases >=0?"newCas":"newsDeath"}>{donnes.change.active_cases}</td>
                     <td>{donnes.critical}</td>
                     <td>{donnes.deaths}</td>
+                    <td className={donnes.change.deaths <=0?"newCas":"newsDeath"}>{donnes.change.deaths}</td>
                     <td>{donnes.recovered}</td>
-                    <td>{donnes.death_ratio}%</td>
-                    <td>{donnes.recovery_ratio}%</td>
+                    <td className={donnes.change.recovered >=0?"newCas":"newsDeath"}>{donnes.change.recovered}</td>
                 </tbody>
             )
             }): <p>No Result</p>}
