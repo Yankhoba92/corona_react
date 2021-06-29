@@ -4,7 +4,7 @@ const Header = () =>{
             <div className="navbarHeader">
             <header>
                 <div className="logo">
-                    <img src="https://res.cloudinary.com/e-bureau/image/upload/v1623935579/logo-masque-facial_o7k67d.jpg" alt="" title="logo"/>
+                    <img src="https://res.cloudinary.com/e-bureau/image/upload/v1624999410/picto-covid-19_b1uirn.png" alt="" title="logo"/>
                 </div>
                 <nav>
                     <ul>
