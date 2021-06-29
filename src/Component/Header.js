@@ -9,7 +9,7 @@ const Header = () =>{
                 <nav>
                     <ul>
                         <li><a href="#coronavirus">Coronavirus</a></li>
-                        <li><a href="#country">Taleau de bord</a></li>
+                        <li><a href="#country">Tableau de bord</a></li>
                     </ul>
                 </nav>
             </header>

@@ -32,7 +32,7 @@ const Main =(props) =>{
                 </div>
                 <div className="casCovid">
                 <div><img src="https://res.cloudinary.com/e-bureau/image/upload/v1624002569/kisspng-business-statistics-average-economic-statistics-green-rising-bar-chart-and-arrow-image-5aa6ff8e45a5f5.3559800315208938382853_t3pfqf.png"/></div>
-                    <p className="">Nombre de cas de covid 19 dans le monde</p>
+                    <p className="">Nombre de cas de covid-19 dans le monde</p>
                     <p className="somme">{sumCovid}</p>
                 </div>
                 <div className="casCovid">

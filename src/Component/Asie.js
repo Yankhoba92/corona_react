@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { useEffect, useState } from "react";
 const Oceanie = (props)=>{
@@ -30,11 +29,10 @@ const Oceanie = (props)=>{
     // console.log("array filtré",newArray)
     return(
         <div>
-            
             <section className="containerTableau">
-                <table class="table table-bordered">
+                <table class="tableStyle">
                 <div>
-                <thead>
+                    <thead>
                         <tr>
                             <th>#</th>
                             <th>Country</th>
@@ -47,23 +45,25 @@ const Oceanie = (props)=>{
                             <th>New recovered</th>
                         </tr>
                     </thead>
-           {newArray !== null ? newArray.map((donnes, index)=>{
-            return (
-                <tbody>
-                    <td>{index}</td>
-                    <td className="paysStyle">{donnes.name}</td>
-                    <td>{donnes.total_cases}</td>
-                    <td className={donnes.change.active_cases >=0?"newCas":"newsDeath"}>{donnes.change.active_cases}</td>
-                    <td>{donnes.critical}</td>
-                    <td>{donnes.deaths}</td>
-                    <td className={donnes.change.deaths <=0?"newCas":"newsDeath"}>{donnes.change.deaths}</td>
-                    <td>{donnes.recovered}</td>
-                    <td className={donnes.change.recovered >=0?"newCas":"newsDeath"}>{donnes.change.recovered}</td>
-                </tbody>
-            )
-            }): <p>No Result</p>}
-            </div>
-                </table>
+                    <tbody>
+                        {newArray !== null ? newArray.map((donnes, index)=>{
+                            return (
+                                <tr>
+                                    <td>{index}</td>
+                                    <td className="paysStyle">{donnes.name}</td>
+                                    <td>{donnes.total_cases}</td>
+                                    <td className={donnes.change.active_cases >=0?"newCas":"newsDeath"}>{donnes.change.active_cases}</td>
+                                    <td>{donnes.critical}</td>
+                                    <td>{donnes.deaths}</td>
+                                    <td className={donnes.change.deaths <=0?"newCas":"newsDeath"}>{donnes.change.deaths}</td>
+                                    <td>{donnes.recovered}</td>
+                                    <td className={donnes.change.recovered >=0?"newCas":"newsDeath"}>{donnes.change.recovered}</td>
+                                </tr>
+                            )
+                            }): <p>No Result</p>}
+                    </tbody>
+                    </div>
+                        </table>
             </section> 
         </div>
         

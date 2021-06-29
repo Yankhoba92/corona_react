@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { useEffect, useState } from "react";
 const AllCountries = (props) =>{
@@ -16,8 +15,7 @@ const AllCountries = (props) =>{
             <p>No Result</p> 
             : 
             <section className="containerTableau">
-                <table class="table table-bordered">
-                <div>
+                <table className="tableStyle">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -32,24 +30,24 @@ const AllCountries = (props) =>{
                             
                         </tr>
                     </thead>
-                    {data.map((country, index) => {
-                        // console.log("changement: ",country.change)
-                        return(
-                            <tbody>
-                                <td>{index}</td>
-                                <td className="paysStyle">{country.name}</td>
-                                <td>{country.total_cases}</td>
-                                <td className={country.change.active_cases >=0?"newCas":"newsDeath"}>{country.change.active_cases}</td>
-                                <td>{country.critical}</td>
-                                <td>{country.deaths}</td>
-                                <td className={country.change.deaths <=0?"newCas":"newsDeath"}>{country.change.deaths}</td>
-                                <td>{country.recovered}</td>
-                                <td className={country.change.recovered >=0?"newCas":"newsDeath"}>{country.change.recovered}</td>
-                            </tbody>
-                        )
-                    })}
-                   
-                </div>
+                    <tbody>
+                        {data.map((country, index) => {
+                            // console.log("changement: ",country.change)
+                            return(
+                                <tr>
+                                    <td>{index}</td>
+                                    <td className="paysStyle">{country.name}</td>
+                                    <td>{country.total_cases}</td>
+                                    <td className={country.change.active_cases >=0?"newCas":"newsDeath"}>{country.change.active_cases}</td>
+                                    <td>{country.critical}</td>
+                                    <td>{country.deaths}</td>
+                                    <td className={country.change.deaths <=0?"newCas":"newsDeath"}>{country.change.deaths}</td>
+                                    <td>{country.recovered}</td>
+                                    <td className={country.change.recovered >=0?"newCas":"newsDeath"}>{country.change.recovered}</td>
+                                </tr>
+                            )
+                        })} 
+                    </tbody>               
                 </table>
             </section>}
          </div>        
