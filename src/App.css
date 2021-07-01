@@ -122,6 +122,40 @@ tbody tr:hover{
   font-size: larger;
   font-weight: bold;
 }
+.socialMedia{
+    display: block;
+    justify-content: end;
+    right: 1.5em;
+    z-index: 100;
+    position:fixed;
+    bottom: 80px;
+    width: 1.5rem;
+}
+.social a img:hover{
+  color: #610a61;
+}
+.socialMedia span{
+  padding-right: 5rem;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  color: #f7f3f3;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  white-space: nowrap;
+  transform-origin: 100% 0;
+  text-align: right;
+  transform: rotate(90deg);
+}
+.socialMedia span::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #f7f3f3;
+}
 
 /* Media queries */
 @media screen and (max-device-width: 400px){

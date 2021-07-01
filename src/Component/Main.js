@@ -21,38 +21,51 @@ const Main =(props) =>{
     
     
     return(
-        <div className="container">
-            <h2 id="coronavirus">Le monde</h2>
-            <div className="graphic">        
-                <div className="casCovid">
+        <div className="containerMain">
+            <div className="container">
+                <h2 id="coronavirus">The woard</h2>
+                <div className="graphic">        
+                    <div className="casCovid">
 
-                <div><img src="https://res.cloudinary.com/e-bureau/image/upload/v1624001721/kisspng-chart-portable-network-graphics-computer-icons-dia--5b6ee9669e2d83.8590197315339953666479_cymlu9.png"/></div>
-                    <p className="">Population mondial</p>
-                    <p className="somme">7873191432</p>
+                    <div><img src="https://res.cloudinary.com/e-bureau/image/upload/v1624001721/kisspng-chart-portable-network-graphics-computer-icons-dia--5b6ee9669e2d83.8590197315339953666479_cymlu9.png"/></div>
+                        <p className="">Word population</p>
+                        <p className="somme">7873191432</p>
+                    </div>
+                    <div className="casCovid">
+                    <div><img src="https://res.cloudinary.com/e-bureau/image/upload/v1624002569/kisspng-business-statistics-average-economic-statistics-green-rising-bar-chart-and-arrow-image-5aa6ff8e45a5f5.3559800315208938382853_t3pfqf.png"/></div>
+                        <p className="">Coronavirus Cases</p>
+                        <p className="somme">{sumCovid}</p>
+                    </div>
+                    <div className="casCovid">
+                        <div><img src="https://res.cloudinary.com/e-bureau/image/upload/v1624002143/graphs-37717_960_720_vzvcdn.png"/></div>
+                        <p className="">Corona deaths</p>
+                        <p className="somme">{sumDeces}</p>
+                    </div>
                 </div>
-                <div className="casCovid">
-                <div><img src="https://res.cloudinary.com/e-bureau/image/upload/v1624002569/kisspng-business-statistics-average-economic-statistics-green-rising-bar-chart-and-arrow-image-5aa6ff8e45a5f5.3559800315208938382853_t3pfqf.png"/></div>
-                    <p className="">Nombre de cas de covid-19 dans le monde</p>
-                    <p className="somme">{sumCovid}</p>
-                </div>
-                <div className="casCovid">
-                    <div><img src="https://res.cloudinary.com/e-bureau/image/upload/v1624002143/graphs-37717_960_720_vzvcdn.png"/></div>
-                    <p className="">Décès due au covid 19</p>
-                    <p className="somme">{sumDeces}</p>
-                </div>
+                <h2 id="country">Dashboard</h2>
+                <nav className="navCountry">
+                    <ul>
+                        <li><Link to="/">All</Link></li>
+                        <li><Link to="/afrique">Africa</Link></li>
+                        <li><Link to="/asie">Asia</Link></li>
+                        <li><Link to="/amerique">America</Link></li>
+                        <li><Link to="/europe">Europe</Link></li>
+                        <li><Link to="/oceanie">Oceania</Link></li>
+                    </ul>
+                </nav>
+                
             </div>
-            <h2 id="country">Tableau de bord</h2>
-            <nav className="navCountry">
-                <ul>
-                    <li><Link to="/">All</Link></li>
-                    <li><Link to="/afrique">Afrique</Link></li>
-                    <li><Link to="/asie">Asie</Link></li>
-                    <li><Link to="/amerique">Amérique</Link></li>
-                    <li><Link to="/europe">Europe</Link></li>
-                    <li><Link to="/oceanie">Océanie</Link></li>
-                </ul>
-            </nav>
+            <div className="socialMedia">
+                <span>Suivez-moi</span>
+                <div className="social">
+                    <a href="https://github.com/Yankhoba92"><img src="https://img.icons8.com/material-outlined/24/000000/github.png"/></a>
+                    <a href="https://linkedin.com/in/yankhoba-bagayoko/?originalSubdomain=fr"><img src="https://img.icons8.com/material-outlined/24/000000/linkedin.png"/></a>
+                </div>
+                
+
+            </div>
         </div>
+        
     )
 }
 export default Main
