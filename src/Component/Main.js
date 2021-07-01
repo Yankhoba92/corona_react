@@ -56,7 +56,7 @@ const Main =(props) =>{
                 
             </div>
             <div className="socialMedia">
-                <span>Suivez-moi</span>
+                <span>Follow me</span>
                 <div className="social">
                     <a href="https://github.com/Yankhoba92"><img src="https://img.icons8.com/material-outlined/24/000000/github.png"/></a>
                     <a href="https://linkedin.com/in/yankhoba-bagayoko/?originalSubdomain=fr"><img src="https://img.icons8.com/material-outlined/24/000000/linkedin.png"/></a>
