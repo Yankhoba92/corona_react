@@ -60,6 +60,7 @@ nav ul li a{
 }
 .container h2{
   color: white;
+  /* text-transform: uppercase; */
 }
 .graphic{
   display: flex;

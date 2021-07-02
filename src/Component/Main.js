@@ -23,7 +23,7 @@ const Main =(props) =>{
     return(
         <div className="containerMain">
             <div className="container">
-                <h2 id="coronavirus">The woard</h2>
+                <h2 id="coronavirus">The word</h2>
                 <div className="graphic">        
                     <div className="casCovid">
 
