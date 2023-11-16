@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const Oceanie = (props)=>{
     const [countriesOceanie, setcountriesOceanie] = useState(null)
     useEffect( async() => {
-      const result = await axios("https://restcountries.eu/rest/v2/region/asia")
+      const result = await axios("https://restcountries.com/v3.1/region/asia")
     //   console.log(result.data)
       const myArray = Object.values(result.data)
       const myArrayArray = myArray.map((test) =>{
